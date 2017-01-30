@@ -1,0 +1,27 @@
+.padding-top-10 {
+  padding-top: 10px;
+}
+
+.border-right {
+  border-right: double;
+}
+
+.tags-container {
+  padding: 15px;
+}
+.tags-inline {
+  display: inline-block;
+}
+
+
+.tag-style {
+  padding: 2px 5px;
+  word-break: break-all;
+  border: solid 1px;
+  border-color: cadetblue;
+  margin-right: 5px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,12 @@
+<div class="pretty-article-container panel">
+  <a target="_blank" href="{{articleObj.url}}">
+    <div class="img-container">
+      <img src="{{articleObj.img}}" *ngIf="articleObj.img"/>
+      <img src="../../../assets/images/sorry-image-not-available.png" *ngIf="!articleObj.img"/>
+    </div>
+    <div class="article-title text-center">
+      <h4><span class="break-word">{{articleObj.title}}</span></h4>
+    </div>
+  </a>
+</div>
+

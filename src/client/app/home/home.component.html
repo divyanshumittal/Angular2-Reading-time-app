@@ -1,0 +1,46 @@
+<nav-bar-component></nav-bar-component>
+<div class="row padding-top-10">
+  <div class="col col-sm-2 border-right">
+    <filters-component [categoriesSelected] = "categoriesSelected"
+                       (selectedCategoriesEvent) = "selectedCategoriesEvent()"></filters-component>
+  </div>
+  <div class="col col-sm-10">
+    <strong>Article of the day</strong>
+    <article [articleObj]="articleOfTheDay"
+             [isBackgroundGrey] = true></article>
+    <div *ngIf="categoriesSelected.length">
+      <strong>Category(s) selected:</strong>
+      <div class="row">
+        <div class="tags-container">
+          <div class="tags-inline" *ngFor="let category of categoriesSelected">
+            <div class="tag-style">
+              <strong><span class="text-primary">{{category.name}}</span></strong>
+              <span><i (click)="deleteCategory(category)" class="fa fa-times-circle cursor-pointer"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="isLoading">
+        <h2 class="text-center">
+          Loading
+        <span class="loading">
+            <i>.</i>
+            <i>.</i>
+            <i>.</i>
+        </span>
+        </h2>
+      </div>
+      <div *ngIf="!isLoading">
+        {{articles.length}} result(s) found
+        <div class="row">
+          <div class="col col-xs-4" *ngFor="let article of articles">
+              <pretty-article [articleObj]="article"></pretty-article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!categoriesSelected.length">
+      <strong>No category selected, Please select a category</strong>
+    </div>
+  </div>
+</div>

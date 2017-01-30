@@ -1,0 +1,25 @@
+<div class="nav-bar-height">
+    <div class="row">
+      <div class="col col-xs-6">
+         <a class="navbar-brand home-page-link" href="#">
+          Reading Ninja
+        </a>
+      </div>
+       <div class="col col-xs-6">
+        <div *ngIf="!user">
+          <button class="btn pull-right Button" type="button" ui-sref="reading-ninja.signUp"> 
+            Sign Up
+          </button>
+          <button uib-popover-template="vm.templateUrl"
+                popover-title="Login" type="button" class="btn pull-right sign Button login-background"
+                popover-placement="bottom"
+                popover-is-open = "vm.isLoginPopupOpen">
+            Log in
+          </button>
+        </div>
+        <div *ngIf="user">
+          <button class="btn pull-right Button" type="button" ng-click="vm.signUp()"> Sign up</button>
+        </div>
+      </div>
+  </div>
+</div>

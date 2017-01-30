@@ -1,0 +1,27 @@
+.nav-bar-height {
+  height: 10%;
+  vertical-align: middle;
+  font-size: 3em;
+  padding: 10px;
+  color: white;
+  background: -webkit-linear-gradient(309deg,#0fb8ad 0,#1fc8db 51%,#2cb5e8 75%);
+  background: linear-gradient(141deg,#0fb8ad 0,#1fc8db 51%,#2cb5e8 75%);
+}
+
+.Button {
+  border-radius: 5px;
+  border: 2px solid rgba(255,255,255,0.3);
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 35px;
+  background: transparent;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  line-height: normal;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+}

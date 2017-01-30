@@ -1,0 +1,13 @@
+<div class="row article-container" [ngClass]="{'background-grey': isBackgroundGrey}">
+  <div class="col col-md-8">
+    <a class="break-word" target="_blank" href="{{articleObj.url}}">{{articleObj.title}}</a>
+  </div>
+  <div class="col col-md-4">
+    <div class="pull-right" *ngIf="!articleObj.img">
+      No image available
+    </div>
+    <div class="img-container pull-right" *ngIf="articleObj.img">
+      <img src="{{articleObj.img}}" />
+    </div>
+  </div>
+</div>
