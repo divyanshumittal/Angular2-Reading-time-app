@@ -3,4 +3,5 @@ export default class Article {
   title: string;
   img: string;
   web_url: string;
+  word_Count: number;
 }

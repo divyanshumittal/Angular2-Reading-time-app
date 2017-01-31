@@ -58,7 +58,6 @@
     "@types/gulp-sass": "^0.0.29",
     "@types/gulp-util": "^3.0.29",
     "@types/jasmine": "^2.5.35",
-    "@types/lodash": "^4.14.37",
     "@types/node": "^6.0.45",
     "@types/rimraf": "0.0.28",
     "@types/run-sequence": "^0.0.28",
@@ -143,6 +142,7 @@
     "@angular/router": "~3.4.1",
     "core-js": "^2.4.1",
     "intl": "^1.2.5",
+    "lodash": "^4.14.37",
     "rxjs": "~5.0.3",
     "systemjs": "0.19.41",
     "zone.js": "^0.7.2"

@@ -28,7 +28,8 @@ export default class ArticlesService {
             url: article['web_url'],
             title: article['headline']['main'],
             img: article.multimedia.length ? 'https://static01.nyt.com/' + article.multimedia[1].url : undefined,
-            web_url: article['web_url']
+            web_url: article['web_url'],
+            word_count: article['word_count']
           };
           articles.push(articleObj);
         });

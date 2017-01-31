@@ -1,10 +1,13 @@
 <nav-bar-component></nav-bar-component>
+
 <div class="row padding-top-10">
-  <div class="col col-sm-2 border-right">
+  <div class="col col-md-2 col-xs-12 border-right">
     <filters-component [categoriesSelected] = "categoriesSelected"
-                       (selectedCategoriesEvent) = "selectedCategoriesEvent()"></filters-component>
+                       (selectedCategoriesEvent) = "selectedCategoriesEvent()"
+                       (selectedTimeEvent) = "selectedTimeEvent($event)"
+                       ></filters-component>
   </div>
-  <div class="col col-sm-10">
+  <div class="col col-md-10">
     <strong>Article of the day</strong>
     <article [articleObj]="articleOfTheDay"
              [isBackgroundGrey] = true></article>

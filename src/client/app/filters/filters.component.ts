@@ -15,13 +15,15 @@ export default class FiltersComponent {
   categoriesSelected: any[];
   @Output()
   selectedCategoriesEvent:EventEmitter = new EventEmitter();
+  @Output()
+  selectedTimeEvent:EventEmitter<number> = new EventEmitter<number>();
 
   constructor(private categoryService: CategoryService) {
     this.categories = categoryService.getCategories();
   }
 
   timeChanged() {
-
+    this.selectedTimeEvent.emit(this.timeValue);
   }
 
   categoryChanged(value: any) {

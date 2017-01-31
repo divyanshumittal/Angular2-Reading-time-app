@@ -18,3 +18,9 @@ label {
 input[type=checkbox] {
 	height: 10px;
 }
+
+@media (min-width: 993px) {
+ .display-block {
+	display: block
+}
+}

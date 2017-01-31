@@ -33,6 +33,13 @@ export class HomeComponent {
     this.getArticles();
   }
 
+  selectedTimeEvent(time) {
+    //assuming avergae reading spped is 60-100 words/minute
+    this.articles = _.filter(this.articlesCopy, function(article) {
+        return (article['word_count'] > time * 60) && (article['word_count'] < time * 100) 
+    });
+  }
+
   deleteCategory(category) {
     this.isLoading = true;
     this.categoriesSelected.splice(this.categoriesSelected.indexOf(category), 1);
@@ -49,6 +56,7 @@ export class HomeComponent {
       this.articlesService.getArticlesBasedOnCategory(categories).then(
         articles => {
           this.articles = articles;
+          this.articlesCopy = Object.assign({}, articles);
           this.isLoading = false;
         }
       );

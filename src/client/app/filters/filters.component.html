@@ -4,21 +4,22 @@
     Category
   </div>
   <div class="padding-left-5">
-    <div *ngFor="let cat of categories">
+    <span *ngFor="let cat of categories" class="display-block">
       <label>
         <input type="checkbox" value="cat.name" id="{{cat.name}}" [(ngModel)]="cat.selected" (change)="categoryChanged(cat)" /> {{cat.name}}
       </label>
-    </div>
+    </span>
   </div>
   <hr>
   <div>
-    <div class="filter-heading">Reading time: {{timeValue}} mins</div>
-    <div class="padding-left-5">
+    <span class="filter-heading display-block">Reading time: {{timeValue}} mins</span>
+    <span class="padding-left-5">
       <input id="rangeSelector" type="range" [(ngModel)]="timeValue" min="0" max="30" (change)="timeChanged()" />
       <div class="row">
         <div class="col col-xs-1">0</div>
         <div class="col col-xs-offset-10 col-1 align-right">30</div>
       </div>
-    </div>
+    </span>
   </div>
 </div>
+
